@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Create Question
+{% endblock %}
+
+{% block content %}
+<h3>New Question</h3>
+<form class="mt-5 new-question-form" action="#">
+    <div class="row mt-3">
+        <div class="col-2">
+            <p>Title</p>
+        </div>
+        <div class="col-10">
+            <input class="form-control is-invalid" type="text">
+            <div class="invalid-feedback">This field is required</div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-2">
+            <p>Text</p>
+        </div>
+        <div class="col-10">
+            <textarea class="form-control is-invalid" rows="10"></textarea>
+            <div class="invalid-feedback">This field is required</div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-2">
+            <p>Tags</p>
+        </div>
+        <div class="col-10">
+            <input class="form-control is-invalid" type="text">
+            <div class="invalid-feedback">This field is required</div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-2">
+        </div>
+        <div class="col-10">
+            <button type="submit" class="btn btn-primary">Ask</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

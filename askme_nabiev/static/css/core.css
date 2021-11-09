@@ -1,0 +1,355 @@
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Montserrat";
+    src:
+        url("../fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Montserrat' !important;
+}
+
+#content-wrapper {
+    min-height: 100vh;
+}
+
+footer {
+    border-top: thin solid rgba(0, 0, 0, 0.15);
+    font-weight: 400;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+
+    margin-top: 1rem;
+    height: 2rem;
+}
+
+.center-items {
+    display: flex;
+    align-items: center;
+}
+
+.topbar {
+    height: 5.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logo-label {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.avatar-topbar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.avatar-question {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.avatar-question-bigger {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.avatar-settings {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.user-group {
+    justify-content: end;
+    font-weight: 500;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.page {
+    margin-top: 7rem;
+}
+
+.hashtag {
+    white-space: nowrap;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.top4tag {
+    font-size: 1rem;
+}
+
+.top3tag {
+    font-size: 1.15rem;
+}
+
+.top2tag {
+    font-size: 1.25rem;
+}
+
+.top1tag {
+    font-size: 1.4rem;
+}
+
+.best-member {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.pagination {
+    font-weight: 400;
+}
+
+.nickname-question {
+    font-weight: 500;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+.nickname-answer {
+    font-weight: 500;
+    font-size: 1.15rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.question-question {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.description-question {
+    font-weight: 500;
+}
+
+.likes-counter-top {
+    font-weight: 400;
+    margin-left: -0.25rem;
+    margin-bottom: -0.25rem;
+}
+.likes-counter {
+    font-weight: 400;
+    margin-left: 0.25rem;
+}
+.likes-btn {
+    padding: 0 .15rem 0 .15rem !important;
+    margin-right: 0.25rem !important;
+}
+
+.likes-group {
+    display: inline-flex;
+    align-items: center;
+}
+
+.comments-group {
+    display: inline-flex;
+    align-items: center;
+}
+
+.comments-indicator {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.tags-label {
+    font-weight: 300;
+}
+
+.tags-tag {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.new-question-form {
+    font-weight: 500;
+}
+
+.new-question-form p {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.settings-form {
+    font-weight: 500;
+}
+
+.settings-form p {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.signin-form {
+    font-weight: 500;
+}
+
+.signin-form p {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.signup-form {
+    font-weight: 500;
+}
+
+.signup-form p {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.invalid-feedback-hidden {
+    display: block !important;
+    visibility: hidden !important;
+}
+
+.popular-tags-container {
+    min-height: 8rem;
+}

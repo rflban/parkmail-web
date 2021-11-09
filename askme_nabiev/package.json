@@ -1,0 +1,19 @@
+{
+  "name": "askme_nabiev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.2",
+    "bootstrap-icons": "^1.6.0",
+    "bootswatch": "^5.1.3"
+  }
+}

@@ -1,0 +1,119 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Askme">
+        <meta name="author" content="rflban">
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <link rel="icon" href="">
+        <!-- Custom styles for this template -->
+        <link href="{% static 'css/core.css' %}" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'bootswatch/dist/lux/bootstrap.min.css' %}" rel="stylesheet">
+        <!-- Font awesome CSS -->
+        <link href="{% static '@fortawesome/fontawesome-free/css/all.css' %}" rel="stylesheet">
+        <script type="text/javascript" src="{% static 'bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    </head>
+    <body>
+        <div id="content-wrapper">
+        <div class="topbar navbar-light bg-light fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 center-items">
+                        <a class="logo-label navbar-brand" href="{% url 'home' %}">
+                        Ask <i class="fas fa-comments"></i> Me
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <form class="" action="#">
+                            <input class="form-control" type="search" placeholder="Search">
+                        </form>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col-3">
+                    {% if is_authenticated  %}
+                        <div class="row justify-content-between">
+                            <div class="col-4 center-items">
+                                <a class="btn btn-primary" style="display: inline;" href="{% url 'question_form' %}">Ask</a>
+                            </div>
+                            <div class="col-8">
+                                <div class="row user-group">
+                                    <div class="col-auto">
+                                        <img src="{% static profile.avatar %}" class="avatar-topbar">
+                                    </div>
+                                    <div class="col-auto center-items dropdown">
+                                        <span id="user-actions" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            {{ profile.username }}
+                                        </span>
+                                        <ul class="dropdown-menu" aria-labelledby="user-actions">
+                                            <li><a class="dropdown-item" href="{% url 'settings' %}">
+                                                <i class="fas fa-cog"></i>&nbsp; Settings
+                                                </a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-sign-out-alt"></i>&nbsp; Sign out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="row justify-content-between">
+                            <div class="col-auto">
+                                <a class="btn btn-primary" href="{% url 'signup' %}">Sign up</a>
+                            </div>
+                            <div class="col-auto signin-form">
+                                <p>or</p>
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-outline-primary" href="{% url 'signin' %}">Sign in</a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container page">
+            <div class="row justify-content-between">
+                <div class="col-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <div class="mt-5 col-3">
+                    <div>
+                        <div class="row">
+                            <h3>Popular Tags</h3>
+                            <div class="popular-tags-container">
+                                {% for tag in tags %}
+                                <a class="hashtag top{{ tag.relevance }}tag" href="{% url 'tag' tag.name %}">{{ tag.name }} &nbsp;</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="mt-4 row">
+                            <h3>Best Members</h3>
+                            <ul class="list-group list-group-flush">
+                                {% for member in best_members %}
+                                <li class="list-group-item"><a class="best-member" href="#">{{ member }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <footer>
+            Web-технологии. Осень 2021. Домашнее задание. Набиев Ф.М. WEB-12.
+        </footer>
+    </body>
+</html>
+

@@ -1,0 +1,28 @@
+{% extends 'core/base_questions_list.html' %}
+
+{% block title %}
+{% url 'new_questions' as url_new_questions %}
+{% url 'hot_questions' as url_hot_questions %}
+
+{% ifequal request.path url_new_questions %} New {% endifequal %}
+{% ifequal request.path url_hot_questions %} Hot {% endifequal %}
+Questions
+{% endblock %}
+
+{% block before_questions %}
+{% url 'new_questions' as url_new_questions %}
+{% url 'hot_questions' as url_hot_questions %}
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link {% ifequal request.path url_new_questions %} active {% endifequal %}" href="{{ url_new_questions }}">
+            <h4 class="{% ifnotequal request.path url_new_questions %} text-muted {% endifnotequal %}">New Questions</h4>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link {% ifequal request.path url_hot_questions %} active {% endifequal %}" href="{{ url_hot_questions }}">
+            <h4 class="{% ifnotequal request.path url_hot_questions %} text-muted {% endifnotequal %}">Hot Questions</h4>
+        </a>
+    </li>
+</ul>
+{% endblock %}

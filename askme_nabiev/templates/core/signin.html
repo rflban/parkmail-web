@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+    Sign In
+{% endblock %}
+
+{% block content %}
+<h3>Sign in</h3>
+<form class="mt-5 signin-form" action="#">
+    <span class="text-danger">
+        Wrong login or password
+    </span>
+    <div class="row mt-3">
+        <div class="col-3">
+            <p>Login</p>
+        </div>
+        <div class="col-5">
+            <input class="form-control is-invalid" type="text">
+        </div>
+        <div class="col-4">
+            <p class="invalid-feedback">
+                Wrong login format
+            </p>
+        </div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-3">
+            <p>Password</p>
+        </div>
+        <div class="col-5">
+            <input class="form-control is-invalid" type="password">
+        </div>
+        <div class="col-4">
+            <p class="invalid-feedback">
+                Wrong password format
+            </p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-3">
+        </div>
+        <div class="col-9">
+            <button type="submit" class="btn btn-primary">Enter</button>
+        </div>
+    </div>
+</form>
+{% endblock %}
