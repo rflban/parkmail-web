@@ -341,3 +341,6 @@ dist
 # Cython debug symbols
 
 # End of https://www.toptal.com/developers/gitignore/api/node,django,python
+
+# MySQL configuration
+my.cnf
